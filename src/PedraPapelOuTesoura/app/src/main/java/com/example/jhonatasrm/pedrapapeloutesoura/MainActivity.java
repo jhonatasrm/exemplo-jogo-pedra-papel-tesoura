@@ -29,14 +29,13 @@ public class MainActivity extends AppCompatActivity {
         resultadoEmpates = findViewById(R.id.empates);
         resultado.setText("CLIQUE PARA COMEÇAR");
 
-        //
         vitorias = 0;
         derrotas = 0;
         empates = 0;
     }
 
     public  void jogadaMaquina(){
-        SystemClock.sleep(500);
+//        SystemClock.sleep(500);
         valorRandom = random.nextInt(3);
         if(valorRandom == 0){
             jogoMaquina.setImageResource(R.drawable.pedra);
