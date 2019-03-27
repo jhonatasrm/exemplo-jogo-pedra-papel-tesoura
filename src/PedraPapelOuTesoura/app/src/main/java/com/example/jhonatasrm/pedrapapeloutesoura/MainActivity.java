@@ -1,6 +1,4 @@
 package com.example.jhonatasrm.pedrapapeloutesoura;
-
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         resultadoVitorias  = findViewById(R.id.vitorias);
         resultadoDerrotas = findViewById(R.id.derrotas);
         resultadoEmpates = findViewById(R.id.empates);
-        resultado.setText("CLIQUE PARA COMEÇAR");
+        resultado.setText(R.string.clique_para_comecar);
 
         vitorias = 0;
         derrotas = 0;
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public  void jogadaMaquina(){
-//        SystemClock.sleep(500);
         valorRandom = random.nextInt(3);
         if(valorRandom == 0){
             jogoMaquina.setImageResource(R.drawable.pedra);
@@ -49,51 +46,55 @@ public class MainActivity extends AppCompatActivity {
     public  void jogaPapel(View view){
         jogadaMaquina();
         if(valorRandom == 0){
-            resultado.setText("VOCÊ GANHOU !!!");
+            resultado.setText(R.string.voce_ganhou);
             vitorias = vitorias + 1;
         }else if(valorRandom == 1){
-            resultado.setText("EMPATE !!!");
+            resultado.setText(R.string.empate);
             empates = empates + 1;
         }else{
-            resultado.setText("VOCÊ PERDEU !!!");
+            resultado.setText(R.string.voce_perdeu);
             derrotas = derrotas + 1;
         }
         mostraResultados();
     }
+
     public  void jogaPedra(View view){
         jogadaMaquina();
         if(valorRandom == 0){
-            resultado.setText("EMPATE !!!");
+            resultado.setText(R.string.empate);
             empates = empates + 1;
         }else if(valorRandom == 1){
-            resultado.setText("VOCÊ PERDEU !!!");
+            resultado.setText(R.string.voce_perdeu);
             derrotas = derrotas + 1;
         }else{
-            resultado.setText("VOCÊ VENCEU !!!");
+            resultado.setText(R.string.voce_ganhou);
             vitorias = vitorias + 1;
         }
         mostraResultados();
     }
+
     public  void jogaTesoura(View view){
         jogadaMaquina();
         if(valorRandom == 0){
-            resultado.setText("VOCÊ PERDEU !!!");
+            resultado.setText(R.string.voce_perdeu);
             derrotas = derrotas + 1;
         }else if(valorRandom == 1){
-            resultado.setText("VOCÊ VENCEU !!!");
+            resultado.setText(R.string.voce_ganhou);
             vitorias = vitorias + 1;
         }else{
-            resultado.setText("EMPATE !!!");
+            resultado.setText(R.string.empate);
             empates = empates + 1;
         }
         mostraResultados();
     }
 
     public void mostraResultados(){
-        resultadoVitorias.setText("Vitórias = "+vitorias);
-        resultadoDerrotas.setText("Derrotas = "+derrotas);
-        resultadoEmpates.setText("Empates = "+empates);
-
+        resultadoVitorias.setText(R.string.total_vitorias);
+        resultadoVitorias.append(" " + Integer.toString(vitorias));
+        resultadoDerrotas.setText(R.string.total_derrotas);
+        resultadoDerrotas.append(" " + Integer.toString(derrotas));
+        resultadoEmpates.setText(R.string.total_empates);
+        resultadoEmpates.append(" " + Integer.toString(empates));
     }
 
 }

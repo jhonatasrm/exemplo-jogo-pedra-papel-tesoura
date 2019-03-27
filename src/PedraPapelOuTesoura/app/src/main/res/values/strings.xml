@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Pedra Papel ou Tesoura</string>
+    <string name="app_name">Pedra, Papel ou Tesoura</string>
+    <string name="clique_para_comecar">CLIQUE PARA COMEÇAR</string>
+    <string name="voce_ganhou">VOCÊ GANHOU !!!</string>
+    <string name="voce_perdeu">VOCÊ PERDEU !!!</string>
+    <string name="empate">EMPATE !!!</string>
+    <string name="total_vitorias">Vitórias = </string>
+    <string name="total_derrotas">Derrotas = </string>
+    <string name="total_empates">Empates = </string>
 </resources>
