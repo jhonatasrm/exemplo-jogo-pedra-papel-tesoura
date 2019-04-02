@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        configuraçãoInicial();
+        configuracaoInicial();
         random = new Random();
     }
 
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //prepara a tela para iniciar as jogadas
-    public void configuraçãoInicial() {
+    public void configuracaoInicial() {
         resultado = findViewById(R.id.resultado);
         jogoMaquina = findViewById(R.id.jogoMaquina);
         resultadoVitorias = findViewById(R.id.vitorias);
