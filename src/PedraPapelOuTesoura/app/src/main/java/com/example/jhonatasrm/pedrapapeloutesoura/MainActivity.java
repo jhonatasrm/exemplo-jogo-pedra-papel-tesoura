@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     int valorRandom;
     Random random;
 
+    // método onCreate que chama o layout em xml da Main Activity e o método que inicializa os findViewById
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
