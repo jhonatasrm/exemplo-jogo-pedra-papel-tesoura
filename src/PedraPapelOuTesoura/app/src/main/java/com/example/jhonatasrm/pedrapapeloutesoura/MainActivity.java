@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         random = new Random();
     }
 
-    //jogada da máquina onde um valor random é atribuido a uma imagem
+    // jogada da máquina onde um valor random é atribuido a uma imagem
     public void jogadaMaquina() {
         valorRandom = random.nextInt(3);
         if (valorRandom == 0) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //caso clicado no papel compara com a jogada da máquina
+    // caso clicado no papel compara com a jogada da máquina
     public void jogaPapel(View view) {
         jogadaMaquina();
         if (valorRandom == 0) {
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         mostraResultados();
     }
 
-    //caso clicado na pedra compara com a jogada da máquina
+    // caso clicado na pedra compara com a jogada da máquina
     public void jogaPedra(View view) {
         jogadaMaquina();
         if (valorRandom == 0) {
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         mostraResultados();
     }
 
-    //caso clicado na tesoura compara com a jogada da máquina
+    // caso clicado na tesoura compara com a jogada da máquina
     public void jogaTesoura(View view) {
         jogadaMaquina();
         if (valorRandom == 0) {
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         mostraResultados();
     }
 
-    //apresenta o resultado de cada jogada
+    // apresenta o resultado de cada jogada
     public void mostraResultados() {
         resultadoVitorias.setText(R.string.total_vitorias);
         resultadoVitorias.append(" " + Integer.toString(vitorias));
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         resultadoEmpates.append(" " + Integer.toString(empates));
     }
 
-    //prepara a tela para iniciar as jogadas
+    // prepara a tela para iniciar as jogadas
     public void configuracaoInicial() {
         resultado = findViewById(R.id.resultado);
         jogoMaquina = findViewById(R.id.jogoMaquina);
